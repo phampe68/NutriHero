@@ -80,71 +80,68 @@ function WelcomeScreen(props) {
     };
 
     console.log(URL);
+
     return (
         <ImageBackground
             style={styles.background}
             source={require("../assets/background.jpeg")}
+            resizeMode={"cover"}
         >
-            <View style={styles.searchContainer}>
-                <SearchBar
-                    style={styles.SearchBar}
-                    placeholder={"search recipe here"}
+            <View style={styles.titleContainer}>
+                <Text style={styles.title}>NutriHero</Text>
+                <View style={styles.searchContainer}>
+                    <SearchBar
+                        style={styles.SearchBar}
+                        placeholder={"search recipe here"}
+                    />
+                </View>
+            </View>
+
+            <View style={styles.swiperContainer}>
+                <Swiper
+                    backgroundColor={"transparent"}
+                    cards={data}
+                    cardIndex={index}
+                    renderCard={(card) => <Card card={card} />}
+                    onSwiper={onSwiped}
+                    stackSize={4}
+                    stackScale={10}
+                    stackSeparation={14}
+                    disableTopSwipe
+                    disableBottomSwipe
                 />
             </View>
 
-            <Swiper
-                backgroundColor={"transparent"}
-                cards={data}
-                cardIndex={index}
-                renderCard={(card) => <Card card={card} />}
-                onSwiper={onSwiped}
-                stackSize={4}
-                stackScale={10}
-                stackSeparation={14}
-                disableTopSwipe
-                disableBottomSwipe
-            />
-
-            <View style={styles.welcomeTitles}>
-                <Text style={styles.title}>NutriHero</Text>
-                <Text style={styles.subTitle}>
-                    Search your favourite recipes!
-                </Text>
-            </View>
-
-            <FlatList></FlatList>
-
-            <TouchableOpacity style={styles.welcomeButton} onPress={getData}>
-                <Text style={styles.welcomeButtonText}>Find Recipes</Text>
-            </TouchableOpacity>
+            <View style={styles.actionContainer} />
         </ImageBackground>
     );
 }
 
 const styles = StyleSheet.create({
+    title: {
+        fontSize: 40,
+        fontWeight: "700",
+    },
     background: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+        flexDirection: "column",
     },
-    welcomeButton: {
-        width: "90%",
-        height: 70,
-        backgroundColor: colors.secondary,
-        borderWidth: 5,
-        margin: 5,
-        marginBottom: 10,
-        borderRadius: 5,
+    titleContainer: {
+        width: "100%",
+        height: "30%",
+        backgroundColor: "transparent",
         alignItems: "center",
         justifyContent: "center",
-        position: "relative",
     },
-    welcomeButtonText: {
-        fontSize: 20,
+    swiperContainer: {
+        width: "100%",
+        height: "50%",
+        backgroundColor: "transparent",
     },
-    welcomeTitles: {
-        top: 50,
-        alignItems: "center",
+    actionContainer: {
+        width: "100%",
+        height: "20%",
+        backgroundColor: "transparent",
     },
     searchContainer: {
         top: 150,
@@ -154,33 +151,27 @@ const styles = StyleSheet.create({
         borderWidth: 3,
         borderRadius: 5,
     },
-    search: {
-        position: "absolute",
+    SearchBar: {
         height: "100%",
         width: "100%",
     },
-    title: {
-        fontSize: 40,
-        fontWeight: "700",
-    },
-    subTitle: {
-        fontSize: 15,
-    },
+
     swiper: {
-        flexWrap0: 0.45,
+        width: "100%",
+        top: 250,
+        alignItems: "center",
+        justifyContent: "center",
     },
     card: {
-        height: 300,
-        width: "90%",
-        borderColor: "black",
-        borderRadius: 10,
+        flex: 0.45,
+        borderRadius: 8,
         shadowRadius: 25,
-        shadowColor: "black",
-        shadowOpacity: 0.8,
+        shadowColor: colors.black,
+        shadowOpacity: 0.08,
         shadowOffset: { width: 0, height: 0 },
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "yellow",
+        backgroundColor: colors.white,
     },
     cardImage: {
         width: 160,
