@@ -21,9 +21,9 @@ NutriHero is a React-Native application that allows the user to search for recip
 Features:
 * recipes are found using the Edamam recipe api
 * cards use <a href="https://github.com/alexbrillant/react-native-deck-swiper">Alex Brilliant's react native deck swiper</a>
-* expo project link: https://expo.io/@phampe68/projects/Nutrihero
-##How the app looks: 
-![ElectronicsStoreScreenShot1](https://media2.giphy.com/media/UEHSMYrUyU4XFMpMu5/giphy.gif)
+
+How the app looks:
+![alt text][nutriheroRecording1.gif]
 
 <!-- GETTING STARTED -->
 ## How to use:
