@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Find recipes by searching and swiping left/right based on recipe pictures.",
+    "githubUrl": "https://github.com/phampe68/NutriHero"
   }
 }
