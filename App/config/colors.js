@@ -1,1 +1,6 @@
-export default { primary: "#fc5c65", secondary: "#4ecdc4", white: "#fff" };
+export default {
+    primary: "#12151F",
+    secondary: "#371BB1",
+    white: "#fff",
+    text: "#05F4B7",
+};
