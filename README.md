@@ -23,7 +23,8 @@ Features:
 * cards use <a href="https://github.com/alexbrillant/react-native-deck-swiper">Alex Brilliant's react native deck swiper</a>
 
 How the app looks:
-![alt text][nutriheroRecording1.gif]
+
+![recording](https://media2.giphy.com/media/UEHSMYrUyU4XFMpMu5/giphy.gif)
 
 <!-- GETTING STARTED -->
 ## How to use:
