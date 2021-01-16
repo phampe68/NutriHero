@@ -28,6 +28,6 @@ How the app looks:
 
 <!-- GETTING STARTED -->
 ## How to use:
-* enter a food you're looking to cook into the search bar.
+* enter a food you're looking to cook into the search bar
 * click on the 'find recipes button' to begin seeing recipes
 * swipe left to go to the next recipe, or swipe right to open a link to the recipe in the browser
