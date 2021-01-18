@@ -81,6 +81,7 @@ function WelcomeScreen(props) {
     }
 
     function goToRecipe() {
+        onSwiped();
         if (data[index].url != undefined) Linking.openURL(data[index].url);
     }
     return (
@@ -109,7 +110,7 @@ function WelcomeScreen(props) {
                     cardIndex={index}
                     renderCard={(card) => <Card card={card} />}
                     onSwipedRight={goToRecipe}
-                    onSwiper={onSwiped}
+                    onSwipedLeft={onSwiped}
                     stackSize={4}
                     stackScale={10}
                     stackSeparation={14}
